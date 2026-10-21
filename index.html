@@ -9,3 +9,81 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Portfolio</title>
+    
+    <!-- MathJax for rendering LaTeX equations and proofs -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            /* Background Image Setup */
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-color: #0d1b2a;
+            
+            /* Typography */
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-box {
+            /* Semi-transparent dark panel to make text readable */
+            background-color: rgba(13, 27, 42, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 40px 50px;
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.25); /* Subtle cyan border */
+            max-width: 750px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            line-height: 1.7;
+        }
+
+        h1, h2 {
+            color: #64ffda; /* Cyan accent matching the background vectors */
+            margin-top: 0;
+            font-weight: 600;
+        }
+
+        .bio-text {
+            font-size: 1.15em;
+            margin-bottom: 30px;
+        }
+
+        .research-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h1>About Me</h1>
+        <p class="bio-text">
+            Hi! I am a researcher interested in discrete optimization, game theory and operations research.
+        </p>
+
+        <!-- A placeholder section you can use to expand on your specific work -->
+        <div class="research-section">
+            <h2>Current Focus</h2>
+            <p>
+                My ongoing work explores semidefinite programming (SDP) relaxations for Max-Cut and Max-\(k\)-Cut games. I am particularly focused on evaluating structural exactness, rank-one conditions, and the uniqueness of optimal solutions using deterministic mathematical reasoning.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
