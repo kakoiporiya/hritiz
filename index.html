@@ -26,6 +26,12 @@ header{background:#f3e8cff5}
 .primary{color:#fff8e9}
 .primary:hover{color:#fff8e9}
 .art figcaption{color:var(--muted)}
+
+/* Landscape photograph across the top of the homepage */
+.hero{isolation:isolate;min-height:520px}
+.hero::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background-image:linear-gradient(to bottom,transparent 70%,#f3e8cf 100%),linear-gradient(90deg,#f3e8cff5 0%,#f3e8cfe6 37%,#f3e8cf66 75%,#f3e8cf40 100%),url('homepage-landscape.jpg');background-size:cover;background-position:center,center,center 48%;pointer-events:none}
+.hero .art{background:radial-gradient(ellipse at center,#f3e8cfbb,transparent 72%)}
+@media(max-width:800px){.hero::before{background-image:linear-gradient(to bottom,#f3e8cfe6 0%,#f3e8cfb8 60%,#f3e8cf 100%),url('homepage-landscape.jpg');background-position:center,center 48%}}
 </style>
 </head>
 <body>
