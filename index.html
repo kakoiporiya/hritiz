@@ -41,6 +41,53 @@ header{background:#f3e8cff5}
 .button:not(.primary){background:#f8f0dfb3}.button:not(.primary):hover{background:var(--panel);border-color:var(--accent)}.contact p+p{margin-top:12px}
 .talk{display:grid;grid-template-columns:170px minmax(0,1fr);gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}.talk:last-child{border-bottom:0}.talk-date{font-size:13px;color:var(--muted);margin:3px 0 0}.talk-status{display:block;width:fit-content;margin-top:9px;padding:2px 9px;border:1px solid var(--line);border-radius:20px;font-size:11px;color:var(--accent)}.talk h3{font-size:24px;margin:0 0 10px}.talk div p{font-size:14px;color:var(--muted);margin:0 0 3px}.talk-link{display:inline-block;margin-top:11px;font-size:13px;color:var(--accent)}@media(max-width:650px){.talk{grid-template-columns:1fr;gap:10px}.talk h3{font-size:22px}.talk-status{display:inline-block;margin:0 0 0 10px}nav{flex-wrap:wrap;row-gap:8px}}
 .learning-materials{margin:28px 0 30px;padding:23px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.learning-materials h3{font-size:23px;margin:0 0 18px;color:var(--text)}.learning-materials ul{list-style:none;margin:0;padding:0}.learning-materials li{display:grid;grid-template-columns:115px minmax(0,1fr);gap:18px;margin:0 0 13px;font-size:14px;line-height:1.7}.learning-materials li:last-child{margin-bottom:0}.material-subject{color:var(--text);font-weight:500}@media(max-width:520px){.learning-materials li{grid-template-columns:1fr;gap:2px;margin-bottom:17px}}
+
+/* Mobile navigation and touch controls */
+html{-webkit-text-size-adjust:100%}
+.nav-toggle{display:none;font-family:inherit;font-size:14px;font-weight:500;line-height:1.2;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:6px;min-height:44px;padding:10px 14px;align-items:center;gap:10px;cursor:pointer}
+.nav-toggle[hidden]{display:none}.nav-toggle svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+main,.copy,.card,.publication,.talk>div{min-width:0}h1,h2,h3,p,li{overflow-wrap:break-word}
+@media(max-width:820px){
+ html{scroll-padding-top:90px}
+ .wrap{width:calc(100% - 36px)}
+ header{position:sticky;top:0;z-index:5}
+ .nav{min-height:72px;padding:12px 0;gap:0 16px;flex-wrap:wrap}
+ .brand{font-size:23px}
+ .nav-toggle:not([hidden]){display:inline-flex;margin-left:auto}
+ nav{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 8px;font-size:14px;padding:12px 0 2px}
+ nav a{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:5px}
+ nav a:hover,nav a:focus-visible{background:var(--line)}
+ .mobile-nav-ready nav{display:none}.mobile-nav-ready.menu-open nav{display:grid}
+ .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;font-size:14px;padding:11px 18px}
+ .footer-inner{flex-wrap:wrap}
+}
+@media(max-width:380px){.wrap{width:calc(100% - 28px)}.brand{font-size:21px}}
+
+@media(max-width:820px){
+ .hero{grid-template-columns:minmax(0,1fr);padding:44px 0 40px;min-height:0}
+ h1{font-size:clamp(42px,10vw,64px);letter-spacing:-1.5px;line-height:1.12}
+ .name-scripts{font-size:16px;line-height:1.9;margin-bottom:20px}
+ .eyebrow{font-size:10px;letter-spacing:1.5px;line-height:1.8;max-width:480px}
+ .hero-quotes{margin:24px 0}.hero-quotes blockquote{margin-bottom:24px}
+ .hero-quotes blockquote p{font-size:19px;line-height:1.65}
+ .hero-quotes blockquote footer{font-size:12px}
+ .section-head{grid-template-columns:minmax(0,1fr);gap:12px}
+ section{padding:40px 0}h2{font-size:30px}
+ .research-grid{grid-template-columns:minmax(0,1fr)!important;gap:16px;margin-top:24px}
+ .card{padding:23px}.card h3{font-size:23px;margin-top:15px}.card p{font-size:15px}
+ .paper{grid-template-columns:minmax(0,1fr);gap:8px;padding:24px 0}
+ .paper-link,.talk-link{display:inline-flex;align-items:center;min-height:44px;width:fit-content;font-size:14px}
+ .paper p,.talk div p{font-size:15px}
+ .talk{grid-template-columns:minmax(0,1fr);gap:12px;padding:24px 0}
+ .talk h3{font-size:23px}.talk-date{font-size:14px}
+ .contact{display:block;padding:25px}.contact p{font-size:16px}
+ .contact .button{display:inline-flex;margin-top:22px}
+ .learning-materials li{grid-template-columns:minmax(0,1fr);gap:3px;font-size:15px;margin-bottom:18px}
+ .learning-materials h3{font-size:23px}
+}
+@media(max-width:440px){.buttons{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}.hero-quotes blockquote p{font-size:18px}.eyebrow:before{width:15px;margin-right:8px}}
+
 </style>
 
 <link rel="canonical" href="https://kakoiporiya.github.io/hritiz/">
@@ -49,7 +96,7 @@ header{background:#f3e8cff5}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="wrap nav"><a class="brand" href="#main" aria-label="Hritiz Gogoi home">Hritiz Gogoi<span>.</span></a><nav aria-label="Main navigation"><a href="#about">About</a><a href="research.html">Research</a><a href="cv.html">CV</a><a href="#talks">Talks</a><a href="#papers">Writing</a><a href="#contact">Connect</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#main" aria-label="Hritiz Gogoi home">Hritiz Gogoi<span>.</span></a><button class="nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Menu<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav id="main-navigation" aria-label="Main navigation"><a href="#about">About</a><a href="research.html">Research</a><a href="cv.html">CV</a><a href="#talks">Talks</a><a href="#papers">Writing</a><a href="#contact">Connect</a></nav></div></header>
 <main id="main" class="wrap">
 <div class="hero">
 <div><p class="eyebrow">Discrete Optimization · Game theory · Operations Research</p><h1>Hritiz Gogoi</h1><p class="name-scripts"><span lang="as">ঋতিজ গগৈ</span><span class="name-separator" aria-hidden="true"> | </span><span lang="ahom">𑜑𑜞𑜣 𑜄𑜣 𑜊 𑜀𑜦𑜡 𑜀𑜩𑜨</span></p><div class="hero-quotes" aria-label="Favourite quotations">
@@ -79,5 +126,7 @@ header{background:#f3e8cff5}
 <section id="contact"><div class="contact"><div><p class="section-label">05 / Connect</p><h2>Let’s chat</h2><p>I enjoy engaging in thoughtful discussions about science, mathematics, current affairs, and ideas from other fields—find me at the Department of Industrial Engineering and Operations Research, IIT Bombay.</p></div><a class="button" href="https://www.linkedin.com/in/hritiz-gogoi-48999435a/">Find me on LinkedIn ↗</a></div></section>
 </main>
 <footer><div class="wrap footer-inner"><span>Hritiz Gogoi · IIT Bombay</span><span>Discrete optimization &amp; game theory</span></div></footer>
-</body>
+<script>
+(()=>{const header=document.querySelector('header'),button=header.querySelector('.nav-toggle'),nav=header.querySelector('nav');button.hidden=false;header.classList.add('mobile-nav-ready');function close(){header.classList.remove('menu-open');button.setAttribute('aria-expanded','false')}button.addEventListener('click',()=>{const open=header.classList.toggle('menu-open');button.setAttribute('aria-expanded',String(open))});nav.addEventListener('click',e=>{if(e.target.closest('a'))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('menu-open')){close();button.focus()}})})();
+</script></body>
 </html>
